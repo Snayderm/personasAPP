@@ -30,9 +30,16 @@
                     <th scope="row">{{ $comuna->comu_codi }}</th>
                     <td>{{ $comuna->comu_nomb }}</td>
                     <td>{{ $comuna->muni_nomb }}</td>
+<<<<<<< HEAD
                   
                 </tr>
                 @endforeach
+=======
+                    <td>
+<<<<<<< HEAD
+                      
+              
+>>>>>>> 660a7e6f018e5f78170273d3026cd33b56dd6346
             </tbody>
         </table>
     <div>
