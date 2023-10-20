@@ -32,12 +32,7 @@
                     <td>{{ $comuna->muni_nomb }}</td>
                     <td>
 <<<<<<< HEAD
-                      <a href="{{route('comunas.edit',['comuna'=>$comuna->comu_codi]) }}"
-                        class="btn btn-info"> Edit </a></li>
-=======
-                     
->>>>>>> f2498769c5d4e4d5f2dc4af7aea2a131e971a8d2
-                    </td>
+                      
               
             </tbody>
         </table>
