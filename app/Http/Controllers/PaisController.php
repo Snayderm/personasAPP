@@ -74,9 +74,10 @@ class PaisController extends Controller
      */
     public function edit($id)
     {
-        $pais = Pais::findOrFail($id);
-        return view('paises.edit', compact('pais'));
+      $pais = Pais::findOrFail($id);
+      return view('paises.edit', compact('pais'));
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -88,16 +89,19 @@ class PaisController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
+            'pais_codi' => 'required|alpha|size:3',
             'pais_nomb' => 'required',
             'pais_capi' => 'required|numeric',
         ]);
-
+    
         $pais = Pais::find($id);
+    
+        $pais->pais_codi = $request->input('pais_codi');
         $pais->pais_nomb = $request->input('pais_nomb');
         $pais->pais_capi = $request->input('pais_capi');
         $pais->save();
-
-        return view("paises.index", ["paises" => $paises]);
+    
+        return redirect()->route('paises.index');
     }
     /**
      * Remove the specified resource from storage.
