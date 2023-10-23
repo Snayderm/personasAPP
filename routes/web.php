@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PaisController;
 use App\Http\Controllers\DepartamentoController;
 use App\Http\Controllers\MunicipioController;
 use App\Http\Controllers\ComunaController;
@@ -50,3 +51,11 @@ Route::get('/municipios/create', [MunicipioController::class, 'create'])->name('
 Route::delete('/municipios/{municipio}', [MunicipioController::class, 'destroy'])->name('municipios.destroy');
 Route::put('/municipios/{municipio}', [MunicipioController::class, 'update'])->name('municipios.update');
 Route::get('/municipios/{municipio}/edit', [MunicipioController::class, 'edit'])->name('municipios.edit');
+
+//Pais
+Route::get('/paises', [PaisController::class, 'index'])->name('paises.index');
+Route::post('/paises', [PaisController::class, 'store'])->name('paises.store');
+Route::get('/paises/create', [PaisController::class, 'create'])->name('paises.create');
+Route::delete('/paises/{pais}', [PaisController::class, 'destroy'])->name('paises.destroy');
+Route::put('/paises/{pais}', [PaisController::class, 'update'])->name('paises.update');
+Route::get('/paises/{pais}/edit', [PaisController::class, 'edit'])->name('paises.edit');
