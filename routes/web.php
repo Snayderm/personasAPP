@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DepartamentoController;
+use App\Http\Controllers\MunicipioController;
 use App\Http\Controllers\ComunaController;
 use Illuminate\Support\Facades\Route;
 
