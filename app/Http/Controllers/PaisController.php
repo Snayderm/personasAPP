@@ -22,7 +22,7 @@ class PaisController extends Controller
        ->select('tb_pais.*', "tb_municipio.muni_nomb")
        //->orderBy('pais_nomb')
        ->get();       
-        return view("pais.index",['paises' => $paises]);//se le quita la s 
+        return view("paises.index",['paises' => $paises]);//se le quita la s 
     }
 
     /**
@@ -35,7 +35,7 @@ class PaisController extends Controller
         $municipios = DB::table('tb_municipio')
         ->orderBy("muni_nomb")
         ->get();
-        return view('pais.new',['municipios'=>$municipios]);
+        return view('paises.new',['municipios'=>$municipios]);
     }
 
     /**
@@ -59,7 +59,7 @@ class PaisController extends Controller
         ->select('tb_pais.*', 'tb_municipio.muni_nomb')
         //->orderBy('pais_nomb')
         ->get();       
-        return view('pais.index',['paises'=>$paises]);
+        return view('paises.index',['paises'=>$paises]);
     }
 
     /**
@@ -85,7 +85,7 @@ class PaisController extends Controller
        $municipios = DB::table('tb_municipio')
        ->orderBy('muni_nomb')
        ->get();
-       return view('pais.edit',['pais'=>$pais, 'municipios'=> $municipios]);
+       return view('paises.edit',['pais'=>$pais, 'municipios'=> $municipios]);
     }
 
     /**
@@ -98,7 +98,7 @@ class PaisController extends Controller
     public function update(Request $request, $id)
     {
         $pais = Pais::find($id);
-        
+
         $pais->pais_nomb = $request->name;
         $pais->pais_capi = $request->code;
         $pais->save();
@@ -108,7 +108,7 @@ class PaisController extends Controller
         ->select('tb_pais.*',"tb_municipio.muni_nomb")
         //->orderBy('pais_nomb')
         ->get();
-         return view('pais.index',['paises'=>$paises]);
+         return view('paises.index',['paises'=>$paises]);
     }
 
     /**
@@ -127,6 +127,6 @@ class PaisController extends Controller
         ->select('tb_pais.*', "tb_municipio.muni_nomb")
         //->orderBy('pais_nomb')
         ->get();        
-        return view('pais.index',['paises'=>$paises]);
+        return view('paises.index',['paises'=>$paises]);
     }
 }
