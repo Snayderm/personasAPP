@@ -8,27 +8,38 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <title>Add Country</title>
   </head>
   <body>
-    <div class="container">
-        <h1>Edit Country</h1>
-        <form method="post" action="{{ route('paises.update', ['pais' => $pais->pais_codi]) }}">
-            @method('put')
+    <div class="container"> <!-- Agregamos un contenedor Bootstrap -->
+        <h1>Add Country</h1>
+        <form method="post" action="{{ route('paises.store') }}">
             @csrf
             <div class="mb-3">
-                <label for="pais_codi" class="form-label">Country Code (3 letters):</label>
-                <input type="text" class="form-control" id="pais_codi" name="pais_codi" required value="{{ $pais->pais_codi }}">
+                <label for="pais_codi" class="form-label">Código del País (3 letras):</label>
+                <input type="text" class="form-control" id="pais_codi" name="pais_codi" required>
             </div>
             <div class="mb-3">
-                <label for="pais_nomb" class="form-label">Country Name:</label>
-                <input type="text" class="form-control" id="pais_nomb" name="pais_nomb" required value="{{ $pais->pais_nomb }}">
+                <label for="pais_nomb" class="form-label">Nombre del País:</label>
+                <input type="text" class="form-control" id="pais_nomb" name="pais_nomb" required>
             </div>
             <div class="mb-3">
-                <label for="pais_capi" class="form-label">Country Nacionality:</label>
-                <input type="number" class="form-control" id="pais_capi" name="pais_capi" required value="{{ $pais->pais_capi }}">
+                <label for="pais_capi" class="form-label">Capital del País:</label>
+                <input type="number" class="form-control" id="pais_capi" name="pais_capi" required>
             </div>
-            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="submit" class="btn btn-primary">Crear País</button>
         </form>
     </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
   </body>
 </html>
