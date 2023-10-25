@@ -10,7 +10,12 @@
 
     <style>
         body {
-            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: black;
         }
 
         .container {
@@ -20,14 +25,29 @@
         .card {
             border: none;
             cursor: pointer;
+            width: 190px;
+            height: 254px;
+            overflow: visible;
+            box-shadow: 0px 0px 10px 1px #000000ee;
+            border-radius: 5px;
         }
 
         .card:hover {
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: rotateY(180deg);
         }
 
         .card-title {
-            font-size: 24px;
+            font-size: x-large;
+            color: rgb(0, 0, 0);
+            text-align: center; /* Centra el texto horizontalmente */
+            position: absolute;
+            top: 50%; /* Centra el texto verticalmente */
+            left: 50%; /* Centra el texto horizontalmente */
+            transform: translate(-50%, -50%); /* Ajusta la posición en el centro */
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
         }
     </style>
 </head>
@@ -37,9 +57,8 @@
             <div class="col-lg-3 col-md-6 mb-4">
                 <div class="card">
                     <a href="comunas">
-                        <img src="comuna-image.jpg" class="card-img-top" alt="Comuna">
                         <div class="card-body">
-                            <h5 class="card-title">Comuna</h5>
+                            <h1 class="card-title">Comuna</h1>
                         </div>
                     </a>
                 </div>
@@ -47,9 +66,8 @@
             <div class="col-lg-3 col-md-6 mb-4">
                 <div class="card">
                     <a href="departamentos">
-                        <img src="departamentos-image.jpg" class="card-img-top" alt="Departamentos">
                         <div class="card-body">
-                            <h5 class="card-title">Departamentos</h5>
+                            <h1 class="card-title">Departamentos</h1>
                         </div>
                     </a>
                 </div>
@@ -57,9 +75,8 @@
             <div class="col-lg-3 col-md-6 mb-4">
                 <div class="card">
                     <a href="paises">
-                        <img src="paises-image.jpg" class="card-img-top" alt="Países">
                         <div class="card-body">
-                            <h5 class="card-title">Países</h5>
+                            <h1 class="card-title">Países</h1>
                         </div>
                     </a>
                 </div>
@@ -67,9 +84,8 @@
             <div class="col-lg-3 col-md-6 mb-4">
                 <div class="card">
                     <a href="municipios">
-                        <img src="municipios-image.jpg" class="card-img-top" alt="Municipios">
                         <div class="card-body">
-                            <h5 class="card-title">Municipios</h5>
+                            <h1 class="card-title">Municipios</h1>
                         </div>
                     </a>
                 </div>

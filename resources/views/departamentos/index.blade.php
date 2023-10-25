@@ -13,6 +13,7 @@
     <div class="container">
         <h1>Listado de Departamentos</h1>
         <a href="{{ route('departamentos.create') }}" class="btn btn-success">Add</a>
+        <button class="btn btn-warning" onclick="goBack()">Volver</button>
         <table class="table">
             <thead>
                 <tr>
@@ -44,5 +45,10 @@
             </tbody>
         </table>
     <div>
+      <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
   </body>
 </html>
